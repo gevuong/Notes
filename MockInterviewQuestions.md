@@ -51,3 +51,17 @@
 
 ## Event Loop in JS
 - The event loop is a queue of callback functions. When an async function executes, the callback function is pushed into the queue. The event loop isn't processed until the code after an async function has
+
+- setTimeout, DOM(document), and ajax(XMLHTTPRequest) are web APIs provided by the browser, not in JavaScript Runtime: Chrome V8 Engine.
+- When the web API is done processing setTimeout for example, the webAPI pushes the callback on to the task queue when it's done. That's when the event loop comes into play.
+
+- The event loop looks at the stack and the task queue. If the stack is empty it takes the first thing on the queue and pushes it onto the stack, which effectively runs the callback.
+
+- The stack is like JavaScript land, back inside V8.
+
+### Render Queue
+- Render call cannot run until the call stack is cleared, so it behaves like a callback. But the render has a higher priority than the callback.
+
+- If render is blocked due to a synchronous function running like forEach, you cannot click things on screen and see a response.
+
+[http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D]
