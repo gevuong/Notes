@@ -18,7 +18,7 @@
 
 * Levels of Abstraction: Machine Language -> Assembly Language -> C/C++ -> Javascript (very high level, don't deal with where memory is and what it's doing, we have an engine that takes care of that for you)
 
-## IMPORTANT: Node itself is written in C++. It's a C++ program because V8, which converts Javascript to machine code, is written in C++. V8 sits at the core of NodeJS.
+### IMPORTANT: Node itself is written in C++. It's a C++ program because V8, which converts Javascript to machine code, is written in C++. V8 sits at the core of NodeJS.
 
 
 ### What is a Javascript Engine?
