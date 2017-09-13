@@ -1,7 +1,9 @@
 * NodeJS runtime may not support ES 2015 modules, only commonJS modules. So on server side we're going to be using commonJS modules: (const express = require('express').
 * But on the front-end, we can use ES 2015 modules (i.e. import express from 'express'). 
 
+
 # Learn and Understand NodeJS
+
 
 ## V8: The Javascript Engine
 * The heart of NodeJS lies within the V8 JavaScript Engine
@@ -18,7 +20,7 @@
 
 * Levels of Abstraction: Machine Language -> Assembly Language -> C/C++ -> Javascript (very high level, don't deal with where memory is and what it's doing, we have an engine that takes care of that for you)
 
-## IMPORTANT: Node itself is written in C++. It's a C++ program because V8, which converts Javascript to machine code, is written in C++. V8 sits at the core of NodeJS.
+### IMPORTANT: Node itself is written in C++. It's a C++ program because V8, which converts Javascript to machine code, is written in C++. V8 sits at the core of NodeJS.
 
 
 ### What is a Javascript Engine?
@@ -28,6 +30,7 @@
 
 ### Adding Features to JS
 * C++ has more features than Javascript as a programming language. JS was designed to be in the browser, not dealing with lower level operations like connecting to DB or dealing with files or folders in hard drive.
+
 
 
 ## The Node Core
@@ -41,13 +44,13 @@
 * Better ways to organize code into reusable pieces
 * Ways to deal with files (zip files, images)
 * Ways to deal with databases (its the web server that talks to DB)
-*
 
 ### C++ and JS core
 * C++ core is a core of features and utilities built in C++, made available to JS via the hooks of v8 engine. NodeJS provides features for JS, to make available for JS. NodeJS allows us to have more features than normal.
 
 ### When writing JS in node:
 * JS got passed into Node, Node passed it through the embedded V8 engine, and got a response back from code being executed.
+
 
 
 ## Modules
