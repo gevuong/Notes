@@ -1,5 +1,28 @@
 #README
 
+### Rails Routes to test API on (https://art-sharing-api.herokuapp.com/) used postgresql db
+
+user_artworks
+
+       GET    /users/:user_id/artworks(.:format) artworks#index
+
+ users
+
+       GET    /users                  users#index
+       GET    /users/:id              users#show
+artworks
+
+       GET    /artworks/:id          artworks#show
+
+artwork_shares
+
+       GET    /artwork_shares         artwork_shares#index
+
+comments
+
+       GET    /comments               comments#index
+
+
 ## Art Share API
 
 Our goal is to build an application to store, share, and
